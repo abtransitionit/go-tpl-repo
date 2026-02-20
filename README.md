@@ -35,16 +35,20 @@ cd mygoprj
 rm -rf .git
 git init -b main  
 ```
-- update `GO` path in the file `go.mod`
+- update `GO` path and version in the file `go.mod`
 ```shell
 # do update
 go mod init github.com/abtransitionit/mygoprj
-# check updtae
+go 1.24.2
+# check update
 cat go.mod
 ```
+
+- update the following files if necessary:
+  - `.git/config`
+  - `.gitignore`
+
 - commit the code "initial setup from template"
-- update .git/config
-- update .gitignore
 ```shell
 git remote add origin https://github.com/abtransitionit/mygoprj.git
 ```
