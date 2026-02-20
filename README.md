@@ -104,6 +104,18 @@ git push -u origin main
 git push -u origin main
 ```
 
+**Step 10. tag the foundation**
+
+```shell
+# create the tag
+git tag -a v0.1.0 -m "first tag to freeze the foundation"
+
+# push the tag
+git push origin v0.1.0
+```
+
+
+
 see the `CI` in action on github .
 
 # Continuous Integration
