@@ -1,9 +1,9 @@
-# go-tpl-repo
+# go-tpl-app
 
-This repository serves as a standardized template for all future GitHub GO projects within the organization.  
+This repository serves as a standardized template for all future GitHub GO APP projects within the organization.  
 
 ----
-[![Main CI](https://github.com/abtransitionit/go-tpl-repo/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/abtransitionit/go-tpl-repo/actions/workflows/ci.yaml)
+[![Main CI](https://github.com/abtransitionit/go-tpl-app/actions/workflows/ci.yaml/badge.svg?branch=main)](https://github.com/abtransitionit/go-tpl-app/actions/workflows/ci.yaml)
 [![LICENSE](https://img.shields.io/badge/license-Apache_2.0-blue.svg)](https://choosealicense.com/licenses/apache-2.0/)
 
 ----
@@ -19,7 +19,7 @@ This repository includes the following standard governance and documentation com
 | [Code of Conduct](.github/CODE_OF_CONDUCT.md) | A community standards for all participants. |
 | [Contributing Guide](.github/CONTRIBUTING.md) | Explains how to contribute, including reporting issues, submitting pull requests, and development workflow. |
 | Continuous Integration | Automated build, vet, and test executed on each push and pull request. |
-| CHANGELOG | Tracks project changes across versions. |
+| [CHANGELOG](./CHANGELOG.md) | Tracks project changes across versions. |
 | README | This document. Provides project overview, purpose, structure, and onboarding information for users and contributors. |
 
 
@@ -31,7 +31,7 @@ This repository includes the following standard governance and documentation com
 - on `github.com` create `go-prjname` : an empty git repo without `README` and `.gitcore`
 - **locally**, git clone the template for `GO` projects:
 ```shell
-git clone https://github.com/abtransitionit/go-tpl-repo.git go-prjname
+git clone https://github.com/abtransitionit/go-tpl-app.git go-prjname
 ```
 - reset history and init repo
 ```shell
@@ -68,6 +68,7 @@ cat go.mod
 ```
 go mod tidy
 go vet ./...
+go test ./...
 go build ./...
 ```
 
@@ -76,7 +77,7 @@ go build ./...
 - 
 ```
 git add .
-git commit -m "initial setup from template go-tpl-repo"
+git commit -m "initial setup from template go-tpl-app"
 ```
 
 **Step 6. push the code**
@@ -87,26 +88,7 @@ git push -u origin main
 ```
 
 
-**Step 7. Update the README**
-
-- update `go-tpl-repo` to `go-prjname`
-- review each sections and update/add content when needed
-
-**Step 8. check the changes**
-
-```sh
-go vet ./...
-go test ./...
-go build ./...
-```
-
-**Step 9. push the code**
-
-```shell
-git push -u origin main
-```
-
-**Step 10. tag the foundation**
+**Step 7. tag the foundation**
 
 ```shell
 # create the tag

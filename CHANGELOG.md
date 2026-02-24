@@ -1,4 +1,5 @@
-# Changelog
+[Home]: ./README.md
+# [←][Home] Changelog
 
 This document tracks and documents notable changes made to the project over time, version by version. It tracks:
   - What was added, changed, fixed, or removed  

@@ -1,10 +1,12 @@
-# Contributing to This Project
+[Home]: ../README.md
+
+# [←][Home] Contributing to This Project
 
 Thank you for considering contributing! Here are a few guidelines to follow:
 
 ## Reporting Issues
 
-- Use [GitHub Issues](../../issues) to report bugs.
+- Use [GitHub Issues](../../.../issues) to report bugs.
 - Provide a clear title and description.
 - Include steps to reproduce, expected vs. actual behavior.
 

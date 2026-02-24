@@ -1,4 +1,5 @@
-# Contributor Covenant Code of Conduct
+[Home]: ../README.md
+# [←][Home] Contributor Covenant Code of Conduct
 
 ## Our Pledge
 
