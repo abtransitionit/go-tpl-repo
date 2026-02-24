@@ -116,7 +116,7 @@ git tag -a v0.1.0 -m "first tag to freeze the foundation"
 git push origin v0.1.0
 ```
 
-# Nest practice
+# Best practice
 **managing errors**
 ```go
 // generic
