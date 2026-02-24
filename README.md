@@ -56,7 +56,7 @@ cat go.mod
     git remote add origin https://github.com/abtransitionit/go-prjname.git
     ```
   - `.gitignore`
-  - `.CGHANGELOG.md`
+  - `.GHANGELOG.md`
 
 
 **Step 3. Update the README**
