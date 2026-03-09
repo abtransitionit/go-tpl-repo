@@ -1,0 +1,41 @@
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"time"
+
+	"github.com/abtransitionit/go-core/fs"
+	"github.com/abtransitionit/go-core/s3x"
+	"github.com/abtransitionit/go-core/urlx"
+)
+
+func run_save_v3() error {
+	// define context
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	// define the resource location/uri
+	resLocation := "/tmp/config.yaml" // for fs
+	bucketName := "mybucket"          // for bucket
+	bucketPrefix := "config.yaml"     // for bucket
+	// url := "https://example.com/config.yaml"
+
+	// define the resource [source]
+	loader := fs.NewLoader(resLocation)
+	loader = s3x.NewLoader(bucketName, bucketPrefix)
+	loader = urlx.NewLoader("example.com", "config.yaml")
+
+	// operate on resource using the closure
+	data, err := loader(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// print file content
+	fmt.Println(string(data))
+
+	// handle success
+	return nil
+}

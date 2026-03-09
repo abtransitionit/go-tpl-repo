@@ -1,0 +1,45 @@
+package main
+
+import (
+	"context"
+	"fmt"
+	"log"
+	"time"
+
+	"github.com/abtransitionit/go-yfm"
+)
+
+func run_load_v2() error {
+	// define context
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+	defer cancel()
+
+	// define the resource location/uri
+	resUri := "file:///tmp/config.yaml"
+	// resUri := "https://example.com/config.yaml"
+	// resUri := "s3://my-bucket/config.yaml"
+
+	// define the resource [source]
+	src, err := yfm.NewSource(resUri)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// Create service from [resource] source
+	svc, err := yfm.NewService(src)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// operate on resource using it service
+	data, err := svc.Load(ctx)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// print file content
+	fmt.Println(string(data))
+
+	// handle success
+	return nil
+}
