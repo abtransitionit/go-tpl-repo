@@ -11,7 +11,7 @@ This repository serves as a standardized template for all future GitHub GO APP p
 ----
 
 
-# Repository Contribution & Governance
+# [↑][Top] Repository Contribution & Governance
 
 This repository includes the following standard governance and documentation components:
 
@@ -26,7 +26,7 @@ This repository includes the following standard governance and documentation com
 
 ----
 
-# Getting Started  
+# [↑][Top] Getting Started  
 
 ## Create a repository from this template (e.g. `go-prjname`)
 **Step 1. create and clone**
@@ -100,8 +100,9 @@ git tag -a v0.1.0 -m "first tag to freeze the foundation"
 # push the tag
 git push origin v0.1.0
 ```
+----
 
-# Best practice
+# [↑][Top] Best practice
 **managing errors**
 ```go
 // generic
@@ -115,7 +116,9 @@ fmt.Errorf("open database %q: %w", dsn, err)
 
 see the `CI` in action on github .
 
-# Continuous Integration
+----
+
+# [↑][Top] Continuous Integration
 
 This repository uses GitHub Actions (Workflow file: `.github/workflows/ci.yaml`) for automated tasks and quality control.
 
@@ -125,7 +128,7 @@ The CI pipeline performs:
 - static analysis (`go vet`)
 - tests execution (`go test`)
 
-
+----
 
 # [↑][Top] Packages documentation
 
